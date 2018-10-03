@@ -19,7 +19,7 @@
 - В `inputField.tag` передаю как параметр код для локализации label, а в `i18n.jsp` передаю как параметр `page`. См. [JSP include action with parameter example](https://beginnersbook.com/2013/12/jsp-include-with-parameter-example)
 
 ### Topjava 12
-- обновил версии: Spring 5.x, Spring Data 2.x, Ehcache 3.x, datatables, datetimepicker
+- обновил версии: Spring 5.isExceeded, Spring Data 2.isExceeded, Ehcache 3.isExceeded, datatables, datetimepicker
 - добавил видео решений HW0 с одним проходом
 - поправил видео [Обзор Spring Framework. Spring Context](https://drive.google.com/file/d/1fBSLGEbc7YXBbmr_EwEHltCWNW_pUmIH). Дописал про Constructor injection.
 - заменил видео про тетсирование сервисов. Вместо самодельных матчеров стали использовать [AssertJ](http://joel-costigliola.github.io/assertj/index.html). Видео [Тестирование UserService через AssertJ](https://drive.google.com/open?id=1SPMkWMYPvpk9i0TA7ioa-9Sn1EGBtClD), время 1:53
@@ -98,7 +98,7 @@
   - заменил валидацию <a href="http://stackoverflow.com/questions/17137307">`@NotEmpty` на `@NotBlank`</a>
   - заменил `CascadeType.REMOVE` на <a href="http://stackoverflow.com/questions/21149660">`@OnDelete`</a>
   - изменил `JdbcUserRepositoryImpl.getAll()`
-  - обновил jQuery до 3.x, исключил из зависимостей webjars ненужные jQuery
+  - обновил jQuery до 3.isExceeded, исключил из зависимостей webjars ненужные jQuery
   - cделал <a href="http://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup/24070373#24070373">загрузку скриптов асинхронной</a>
   - фильтр еды сделал в [Bootstrap Panels](http://getbootstrap.com/components/#panels)
   - вместо `Persistable` ввел интерфейс `HasId` и наследую от него как Entity, так и TO
@@ -163,6 +163,6 @@
   - `LoggerWrapper`
   - <a href="http://dandelion.github.io">Dandelion обертку к datatables</a>
 - обновил 
-  - Hibernate до 5.x и Hibernate Validator, добавились новые зависимости и `jackson-datatype-hibernate5`
+  - Hibernate до 5.isExceeded и Hibernate Validator, добавились новые зависимости и `jackson-datatype-hibernate5`
   - datatables API (1.10)
   - Postgres драйвер. Новый драйвер поддерживает Java 8 Time API, разделил реализацию JdbcMealRepositoryImpl на Java8 (Postgresql) и Timestamp (HSQL)
