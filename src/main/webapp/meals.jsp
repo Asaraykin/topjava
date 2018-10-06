@@ -24,7 +24,7 @@
                <c:if test="${meal.isExceed()}"> <c:set var = "textColor" value="FF0000"/> </c:if>
             <c:if test="${!meal.isExceed()}"> <c:set var = "textColor" value="21610B"/> </c:if>
             <tr>
-                <td><p style=" color:${textColor}" > ${meal.getDateTime()} </p></td>
+                <td><p style=" color:${textColor}" > ${meal.getDateTime().toLocalDate()} ${meal.getDateTime().toLocalTime()}  </p></td>
                 <td><p style=" color:${textColor}"> ${meal.getDescription()} </p></td>
                 <td><p style=" color:${textColor}"> ${meal.getCalories()} </p></td>
             </tr>
