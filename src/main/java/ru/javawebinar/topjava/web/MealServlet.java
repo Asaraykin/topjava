@@ -1,7 +1,6 @@
 package ru.javawebinar.topjava.web;
 
 import org.slf4j.Logger;
-import ru.javawebinar.topjava.model.Meal;
 import ru.javawebinar.topjava.model.MealWithExceed;
 import ru.javawebinar.topjava.util.MealsUtil;
 
@@ -25,6 +24,6 @@ public class MealServlet extends HttpServlet {
         List<MealWithExceed> mealWithExceedList = MealsUtil.getFilteredWithExceeded(MealsUtil.getList(), LocalTime.of(0, 0), LocalTime.of(23, 59), 2000 );
         request.setAttribute("mealWithExceedList", mealWithExceedList);
         request.getRequestDispatcher("meals.jsp").forward(request, response);
-        //response.sendRedirect("meals.jsp");
+
     }
 }

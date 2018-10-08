@@ -1,17 +1,10 @@
-.tdTextColor > p {
-    color: red;
-}
-
-.h1{
-    color: red;
-}
 
 .table_solid {
     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
     font-size: 14px;
     background: white;
     max-width: 70%;
-    width: 30%;
+    width: 50%;
     border-collapse: collapse;
     text-align: left;
 }
@@ -31,4 +24,17 @@ td {
 }
 
 tr:hover td {color: #6699ff;}
+
+p {
+    color: blue;
+    font-size: small;
+    font-family: Verdana, Arial, sans-serif;
+    align-content: center;
+}
+
+h1{
+    color: blue;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 24px;
+}
 

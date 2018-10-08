@@ -27,4 +27,36 @@
         <url-pattern>/meals</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>mealCrudMemoryServlet</servlet-name>
+        <servlet-class>ru.javawebinar.topjava.web.MealCrudMemoryServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>mealCrudMemoryServlet</servlet-name>
+        <url-pattern>/mealcrudmemory</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>mealAddCrudMemoryServlet</servlet-name>
+        <servlet-class>ru.javawebinar.topjava.web.MealCrudAddServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>mealAddCrudMemoryServlet</servlet-name>
+        <url-pattern>/add_meal</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>mealCrudMemoryUpdate</servlet-name>
+        <servlet-class>ru.javawebinar.topjava.web.MealCrudupdateServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>mealCrudMemoryUpdate</servlet-name>
+        <url-pattern>/update</url-pattern>
+    </servlet-mapping>
 </web-app>
