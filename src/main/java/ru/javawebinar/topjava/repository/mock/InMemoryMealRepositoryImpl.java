@@ -16,10 +16,11 @@ import java.util.stream.Collectors;
 
 @Repository
 public class InMemoryMealRepositoryImpl implements MealRepository {
-    private Map<Integer, Meal> repository = new ConcurrentHashMap<>();
+    private static Map<Integer, Meal> repository = new ConcurrentHashMap<>();
     private AtomicInteger counter = new AtomicInteger(0);
 
     {
+        MealsUtil.MEALS.forEach(meal->meal.setUserId(1));
         MealsUtil.MEALS.forEach(this::save);
     }
 

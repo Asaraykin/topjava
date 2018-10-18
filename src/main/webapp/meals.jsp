@@ -17,12 +17,13 @@
     </style>
 </head>
 <body>
-<section>
-    <h3><a href="index.html">Home</a></h3>
-    <h2>Meals</h2>
-    <a href="meals?action=create">Add Meal</a>
-    <hr/>
-    <table border="1" cellpadding="8" cellspacing="0">
+
+<h3><a href="index.html">Home</a></h3>
+<h2>Meals</h2>
+<a href="meals?action=create">Add Meal</a>
+<p></p>
+<table>
+    <tr><table border="1" cellpadding="8" cellspacing="0">
         <thead>
         <tr>
             <th>Date</th>
@@ -48,6 +49,35 @@
             </tr>
         </c:forEach>
     </table>
-</section>
+    </tr>
+    <tr><p></p></tr>
+    <tr>
+
+        <table align="left">
+            <tr><td>Start time</td> <td>End time</td></tr>
+            <tr>
+                <form method="get" action="meals">
+                    <input type="hidden" name="action" value="filter">
+                    <td><input  type="time" name="startTime" ></td>
+                    <td><input  type="time" name="endTime" >    </tr>
+            <tr>
+                <td><input  type="date" name="startDate" ></td>
+                <td><input  type="date" name="endDate" >
+                    <input type="submit" value="Фильтровать"></td>
+                </form>
+
+            </tr>
+            <tr>
+
+            </tr>
+        </table>
+    </tr>
+</table>
+
+
+
+
+
+
 </body>
 </html>

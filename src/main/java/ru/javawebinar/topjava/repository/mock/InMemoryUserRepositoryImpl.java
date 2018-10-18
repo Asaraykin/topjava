@@ -23,8 +23,8 @@ public class InMemoryUserRepositoryImpl implements UserRepository {
     private static Map<Integer, User> userMap = new ConcurrentHashMap<>();
 
     {
-        save(new User(null, "guest", "sss", "0", Role.ROLE_USER));
-        save(new User(null, "admin", "sss", "0", Role.ROLE_ADMIN));
+        save(new User(1, "guest", "sss", "0", Role.ROLE_USER));
+        save(new User(2, "admin", "sss", "0", Role.ROLE_ADMIN));
     }
 
     @Override
