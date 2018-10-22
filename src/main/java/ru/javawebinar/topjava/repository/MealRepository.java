@@ -1,5 +1,6 @@
 package ru.javawebinar.topjava.repository;
 
+import org.springframework.dao.EmptyResultDataAccessException;
 import ru.javawebinar.topjava.model.Meal;
 
 import java.time.LocalDateTime;
@@ -13,7 +14,7 @@ public interface MealRepository {
     boolean delete(int id, int userId);
 
     // null if meal do not belong to userId
-    Meal get(int id, int userId);
+    Meal get(int id, int userId) throws EmptyResultDataAccessException;
 
     // ORDERED dateTime desc
     List<Meal> getAll(int userId);
