@@ -1,5 +1,8 @@
 Java Enterprise Online Project 
 ===============================
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/263aa442e08e41b4ac3284faaedfb0f7)](https://app.codacy.com/app/Asaraykin/topjava?utm_source=github.com&utm_medium=referral&utm_content=Asaraykin/topjava&utm_campaign=Badge_Grade_Dashboard)
+
 Разработка полнофункционального Spring/JPA Enterprise приложения c авторизацией и правами доступа на основе ролей с использованием наиболее популярных инструментов и технологий Java: Maven, Spring MVC, Security, JPA(Hibernate), REST(Jackson), Bootstrap (css,js), datatables, jQuery + plugins, Java 8 Stream and Time API и хранением в базах данных Postgresql и HSQLDB.
 
 ![topjava_structure](https://user-images.githubusercontent.com/13649199/27433714-8294e6fe-575e-11e7-9c41-7f6e16c5ebe5.jpg)
@@ -104,7 +107,7 @@ Java Enterprise Online Project
 ```
 Сделать реализацию со сложностью O(N):
 - циклом за 1 проход по List<UserMeal>. Обратите внимание на п.13 замечаний
-- через Stream API за 1 проход по полному списку Stream<UserMeal> + возможно дополнительные проходы по частям списка
+- через Stream API за 1 проход по полному списку Stream<UserMeal>
 ```
 #### Замечания по использованию Stream API:
 - Когда встречаешь что-то непривычное, приходится перестраивать мозги. Например, переход с процедурного на ООП программирование дается непросто. Те, кто не знает шаблонов (и не хотят учить) также их встречают плохо. Хорошая новость в том, что если это принять и начать использовать, то начинаешь получать от этого удовольствие. И тут главное не впасть в другую крайность:
