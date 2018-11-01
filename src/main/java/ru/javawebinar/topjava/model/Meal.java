@@ -1,19 +1,42 @@
 package ru.javawebinar.topjava.model;
 
-import javax.persistence.FetchType;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
+@NamedQueries({
+      //  @NamedQuery(name = Meal.GET, query = "select m from Meal m WHERE m.id=:id and m.user.id=:userId"),
+        @NamedQuery(name = Meal.GET_ALL, query = "select m from Meal m WHERE  m.user.id=:userId order by m.dateTime desc "),
+        @NamedQuery(name = Meal.GET_BETWEEN, query = "select m from Meal m where m.user.id=:userId and m.dateTime>:startDate " +
+                "and m.dateTime<:endDate order by m.dateTime desc ")
+})
+
+@Entity
+@Table(name = "meals", uniqueConstraints = {
+        @UniqueConstraint(columnNames = {"id"}, name = "id_constraint")})
 public class Meal extends AbstractBaseEntity {
+
+    public static final String GET = "Meal.get";
+    public static final String GET_ALL = "Meal.getAll";
+    public static final String GET_BETWEEN = "Meal.getBetween";
+
+    @Column(name = "date_time", nullable = false)
+    @NotNull
     private LocalDateTime dateTime;
 
+    @Column(name = "description")
     private String description;
 
+    @Column(name = "calories", nullable = false)
+    @NotNull
     private int calories;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    @NotNull
     private User user;
 
     public Meal() {
